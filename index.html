@@ -224,9 +224,9 @@ footer .copy{color:var(--ink-3); font-size:.85rem; margin:.9rem 0 0}
         <circle class="fill" id="arc" cx="52" cy="52" r="45"></circle>
       </svg>
       <div>
-        <span class="days" id="daysLeft">&mdash;</span>
+        <span class="days" id="daysLeft">17 kun</span>
         <span class="cap">Play Market'da chiqishiga taxminan</span>
-        <span class="cap" style="margin-top:.5rem"><span class="pct" id="pct">0%</span> bajarildi</span>
+        <span class="cap" style="margin-top:.5rem"><span class="pct" id="pct">18%</span> bajarildi</span>
       </div>
     </div>
   </div>
@@ -326,6 +326,8 @@ footer .copy{color:var(--ink-3); font-size:.85rem; margin:.9rem 0 0}
   var arc = document.getElementById('arc');
   arc.style.strokeDasharray = C.toFixed(1);
   arc.style.strokeDashoffset = C.toFixed(1);           // start empty, then fill
+  // (the static markup already shows a sane figure for no-JS / crawler views;
+  //  this recomputes the real one from the dates on every load)
   document.getElementById('pct').textContent = pct + '%';
   document.getElementById('daysLeft').textContent =
     left > 0 ? left + ' kun' : 'Tez kunda';
